@@ -4,8 +4,37 @@ p{
 
 .blue-paragraph{
    color: blue;
+   /* changes block to be inline-block,
+    and removes from flow of page 
+    no longer las 100% width*/
+
+   float: right;
 }
 
+/* id is most specific */
 #important-paragraph{
     font-size: 3rem;
+    text-decoration: none;
+
+}
+
+#container{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.object{
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    position: absolute;
+    top: 20px;
+}
+
+.red-paragraph{
+    background-color: chartreuse;
 }
