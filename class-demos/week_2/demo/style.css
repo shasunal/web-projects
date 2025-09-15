@@ -1,1 +1,11 @@
-/* comment */
+p{
+    text-decoration: underline green;
+}
+
+.blue-paragraph{
+   color: blue;
+}
+
+#important-paragraph{
+    font-size: 3rem;
+}
