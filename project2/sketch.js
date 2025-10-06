@@ -26,7 +26,7 @@ function preload() {
 
 function timeTester() {
   //manual enter time
-  if (TEST) return 16 + 30 / 60;
+  if (TEST) return 8 + 30 / 60;
   return hour() + minute() / 60 + second() / 3600;
 }
 
