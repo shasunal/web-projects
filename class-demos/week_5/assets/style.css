@@ -1,0 +1,13 @@
+body{
+/* centering form on webpage and remove scrollbar */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    margin:0;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
