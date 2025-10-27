@@ -1,0 +1,49 @@
+#body{
+    width: 100px;
+
+}
+html{
+    margin: 0;
+    color: white;
+}
+/* is this computer screen */
+/* always used */
+@media screen and (orientation: landscape){
+    /* add normal css selectors */
+    body{
+        background: navy;
+    }
+}
+/* max width break point and screen will change */
+@media screen and (orientation: portrait) and (max-width: 450px ){
+    body{
+        background-color: magenta;
+    }
+}
+
+/* typically do not use print */
+@media print{
+    body{
+
+    
+    background: magenta;
+    }
+}
+
+@media screen and (max-width: 576px){
+    p{
+        font-size: 16px;
+    }
+}
+/* small */
+@media screen and (min-width:576px) and (max-width: 786px){
+    p{font-size: 60px;
+        background-color: coral;
+    }
+}
+/* medium */
+@media screen and (min-width:768px) and (max-width: 992px){
+    p{font-size: 50px;
+        background-color: pink;
+    }
+}
