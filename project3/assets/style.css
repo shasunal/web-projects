@@ -1,0 +1,468 @@
+.anonymous-pro-regular {
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+html,body{
+  font-family: "Anonymous Pro", monospace;
+  margin: 0;
+  padding: 0;
+  
+}
+
+/* center content index */
+#index-body{
+ overflow: hidden ;
+ display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.index-content{
+    margin: 20%;
+    text-align: center;
+}
+
+
+.fallingimgs{
+    position:absolute;
+    width: 250px;
+    pointer-events: none;
+    
+}
+/* set to hidden at first */
+.hidden{
+  display: none;
+}
+
+.big-word{
+    font-size: 4rem;
+    line-height: 0.5;
+   
+}
+
+p{
+    line-height: 1.4;
+}
+
+/* arrow at bottom center */
+.arrow {
+  position: fixed;
+  bottom:20px;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+/* MENU.HTML */
+
+#menu-body{
+    
+    font-family: "Anonymous Pro", monospace;
+    margin: 0;
+    padding: 0;
+}
+
+
+.menu-container{
+    position: relative;
+    display: flex;
+    height:100vh;
+    width:100%;
+    overflow: hidden;
+    /* 0 opacity for fade in animation */
+    opacity: 0;
+    
+}
+
+.posts-column{
+  width: 30%;
+  padding: 2rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* left column of post titles */
+.post-list{
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   
+}
+/*clickable post titles */
+.post-item {
+  cursor: pointer;
+  margin: 1.5rem 0rem 1.5rem 0rem;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.post-item:hover {
+  color: darkslategrey;
+}
+
+/* each psot title */
+.post-item.active {
+  font-weight: bold;
+  color: #000;
+  
+}
+
+
+
+
+
+.objects-column  {
+    /* background-color: chocolate;  */
+  width: 70%;
+transition: opacity 0.3s ease;
+  position: relative;     
+  overflow: hidden;         
+}
+
+
+.object-item {
+  position: absolute;
+  text-align: center;
+ 
+  /* background-color: #4b0082; */
+
+}
+
+/* strawberry */
+.item1  {
+  width: 320px; 
+  top: 2%;
+  left: 10%;
+  
+}
+/* bottle */
+.item2  {
+  width: 500px;
+  rotate:30deg;
+  top:20%;
+  left:45%;
+}
+/* couch */
+.item3  {
+  width: 700px; 
+ bottom: 5%;
+ left:20%;
+ 
+  
+}
+
+/* hover effect */
+.object-img {
+ width: 100%;
+  max-width: 500px;
+  transition: transform 0.3s ease;
+  
+}
+/* silght zoom in */
+.object-img:hover {
+  transform: scale(1.05);
+}
+
+/* Label styling */
+.object-label {
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+
+.post-title {
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.post-title:hover {
+  color: #4b0082;
+  
+}
+
+.post-detail {
+    
+   position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: darksalmon;
+  padding: 2rem 0rem 2rem 0rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 10;
+  transform: translateX(100%);
+  
+}
+
+/* X close button */
+#back-btn {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-family: "Anonymous Pro", monospace;
+  text-decoration: none;
+  color: black;
+  background-color: transparent;
+}
+
+#back-btn:hover{
+  transform: scale(1.05);
+}
+
+
+
+#detail-image{
+  min-width: 300px;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#detail-caption{
+    width: 70%;
+    margin: 0;
+    font-size: 1rem;
+    text-align: left;
+    /* text breaks */
+    white-space: pre-line;
+}
+
+
+.image-slider {
+  
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  padding: 0 1rem;
+  transition: color 0.3s;
+}
+
+.arrow-btn:hover {
+  color: #4b0082;
+}
+
+
+#gallery-body {
+  font-family: "Anonymous Pro", monospace;
+  margin: 0;
+  padding: 0rem;
+overflow-x: hidden;
+overflow-y: auto;
+}
+
+
+/*grid */
+.gallery-grid {
+  column-count: 4;             
+  column-gap: 1rem;            
+  padding: 1rem;
+}
+
+.gallery-item {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1rem;
+  break-inside: avoid;
+  overflow: hidden;
+}
+
+.image-container{
+    position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+}
+
+.gallery-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  position: relative;
+  z-index: 3;
+  
+}
+
+.gallery-item .hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 4;
+}
+.gallery-caption {
+
+    position: absolute;
+  top: 0;                  
+  left: 0;
+  width: 100%; 
+  max-height: 100%;           
+  overflow-y: auto;
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1.4;
+  z-index: 1;
+  padding-bottom: 2rem;
+  background-color: transparent;
+  scroll-padding-bottom: 1rem;
+  box-sizing: border-box;
+  
+}
+
+
+
+/* shows second image on hover */
+.gallery-item:hover .hover-img {
+  opacity: 1;
+}
+
+.back-container {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+ 
+}
+
+
+.back-btn2 {
+  position: static;
+  background: none;
+  font-size: 2rem;
+  text-decoration: none;
+  color: black;
+  font-family: "Anonymous Pro", monospace;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.back-btn2:hover {
+  transform: translateX(-3px);
+}
+
+.paper-ball{
+   width: 80px; 
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* FORM */
+#submitform {
+  max-width: 600px;
+  margin: 2rem auto;
+   font-family: "Anonymous Pro", monospace;
+
+  
+}
+
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0rem 1.5rem 0rem;
+  font-size: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  box-sizing: border-box;
+  resize: vertical;
+   font-family: "Anonymous Pro", monospace;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+input[type="file"] {
+  font-family: "Anonymous Pro", monospace;
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* Labels */
+label {
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+/* Submit button */
+
+
+.item4 {
+  position: relative; /* so label positions correctly on top */
+  display: inline-block;
+
+  text-align: center;
+}
+
+/* bottle styling stays consistent */
+.item4 .object-img {
+  width: 500px;
+  max-width: 80%;
+  transition: transform 0.3s ease;
+}
+
+
+/* label */
+.item4 .object-label {
+ color: #000;
+  top: 50%;                
+  left: 50%;  
+  
+
+    
+}
+
+button{
+  all: unset;
+}
+
