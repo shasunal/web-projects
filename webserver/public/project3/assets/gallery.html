@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="script.js"></script>
+    
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+
+   <body>
+    <div id="submitform">
+      <div class="back-container">
+        <a href="menu.html" class="back-btn2">← Back</a>
+      </div>
+
+      <form id="uploadForm" action="/upload" method="POST" enctype="multipart/form-data">
+  <input type="text" name="title" placeholder="Title" required minlength="2" /><br />
+  
+  
+  <textarea 
+    name="caption" 
+    placeholder="Write a description..." 
+    required 
+    minlength="5"
+  ></textarea><br />
+
+  <label>Image 1:</label><br />
+  <input type="file" name="photo1" accept="image/*" required /><br /><br />
+
+  <label>Image 2 (optional):</label><br />
+  <input type="file" name="photo2" accept="image/*" /><br /><br />
+
+  <button type="submit" class="object-item item4">
+    <img src="imgs/bottle.png" alt="bottle" class="object-img" />
+    <p class="object-label">Submit</p>
+  </button>
+</form>
+
+    </div>
+  </body>
+</html>

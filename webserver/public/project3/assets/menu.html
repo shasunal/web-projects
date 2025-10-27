@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="menu-body">
+    <div class="menu-container">
+      <!-- left column for posts -->
+      <div class="posts-column">
+        <ul id="post-list" class="post-list"></ul>
+      </div>
+
+      <!-- right column -->
+      <div id="objects-column" class="objects-column">
+        <a href="actualgallery.html" class="object-item item1">
+          <img src="imgs/strawberry.png" alt="pear" class="object-img" />
+          <p class="object-label">gallery</p>
+        </a>
+
+        <a href="gallery.html" class="object-item item2">
+          <img src="imgs/glassbottle.png" alt="lamp" class="object-img" />
+          <p class="object-label">create post</p>
+        </a>
+
+        <a href="index.html" class="object-item item3">
+          <img src="imgs/couch.png" alt="sofa" class="object-img" />
+          <p class="object-label">what is gleaning?</p>
+        </a>
+      </div>
+
+      <!-- post detail -->
+      <div id="post-detail" class="post-detail hidden">
+        <button id="back-btn"> ✕ Close</button>
+        <div class="image-slider">
+          <button id="prev-img" class="arrow-btn">‹</button>
+          <img id="detail-image" src="" alt="Post image" />
+          <button id="next-img" class="arrow-btn">›</button>
+        </div>
+        <p id="detail-caption"></p>
+      </div>
+    </div>
+
+    <!-- IMPORTANT: defer so DOM exists before menu.js runs -->
+    <script src="menu.js" defer></script>
+  </body>
+</html>
