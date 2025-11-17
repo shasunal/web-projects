@@ -31,6 +31,18 @@ const messages = [
   "Everything will be okay",
 ];
 
+
+const gifVisible = ref(false);
+const gifIndex = ref(0);
+const gifs=[
+"/tenor1.gif",
+"/tenor2.gif",
+"/tenor3.gif",
+"/tenor4.gif"
+]
+
+
+
 //one glitch activates at once
 function activateGlitches(count = 1) {
   //findspans hat are not already activated
@@ -97,6 +109,15 @@ function handleDelete(e) {
     top: relativeTop,
     left: relativeLeft,
   });
+
+// check if hiting certain overlays
+if (overlays.value.length % 4 === 0) {
+  //cycle through the gifs
+  gifIndex.value = (gifIndex.value + 1) % gifs.length; 
+  gifVisible.value = true;
+}
+
+
   //trigger the glitch 6 of them for 1 overlay
   activateGlitches(6);
 
@@ -105,9 +126,11 @@ function handleDelete(e) {
   selection.removeAllRanges();
 
   
-
 }
-
+//close gif
+function closeGif() {
+  gifVisible.value = false;
+}
 
 
 
@@ -148,6 +171,12 @@ onBeforeUnmount(() => {
         {{ o.text }}
       </div>
     </div>
+<!-- gif-->
+<div v-if="gifVisible" class="gif-popup">
+  <img :src="gifs[gifIndex]" class="gif-img" />
+
+  <button class="gif-close" @click="closeGif">X</button>
+</div>
 
 
 
@@ -319,6 +348,43 @@ body {
 .text-block div {
   user-select: text;
 }
+
+.gif-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: flip 1.5s infinite alternate ease-in-out;
+  z-index: 99999;
+}
+
+.gif-img {
+  width: 500px;
+  height: auto;
+  display: block;
+}
+
+.gif-close {
+  position: absolute;
+  top: 15px;
+  right: -5;
+  padding: 10px 10px;
+  border: none;
+  color: black;
+  background-color: white;
+  font-weight: bold;
+  cursor: pointer;
+  animation: flip 1.5s infinite alternate ease-in-out;
+}
+@keyframes flip {
+  0% {
+    transform: translate(-50%, -50%) scaleX(1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scaleX(-1);
+  }
+}
+
 
 
 
