@@ -1,0 +1,12 @@
+{
+  "name": "project4",
+  "version": "1.0.0",
+  "description": "Due 11/17   Create an account on BlueSky and make a bot that runs automatically! What is the interval it posts at? Try bigger times, like once a day or once a week. Think about using an external api to produce content.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
