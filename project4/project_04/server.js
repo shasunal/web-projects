@@ -4,6 +4,6 @@ const app = express()
 
 app.use(express.static('dist'))
 
-app.listen(5002, ()=>{
-    console.log('app is running at http://127.0.0.1:5002')
-})
+app.listen(5004, "0.0.0.0", () => {
+  console.log("app running on port 5004");
+});
