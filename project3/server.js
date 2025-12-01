@@ -152,6 +152,6 @@ app.get("/all-submissions", (req, res) => {
 });
 
 // Start the server
-app.listen(3001, () => {
-  console.log("Server running at http://127.0.0.1:3001/");
+app.listen(3000, "0.0.0.0", () => {
+  console.log("Server running");
 });

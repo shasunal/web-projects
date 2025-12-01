@@ -246,10 +246,11 @@ transition: opacity 0.3s ease;
 #detail-caption{
     width: 70%;
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: left;
     /* text breaks */
     white-space: pre-line;
+     padding-bottom: 3rem;
 }
 
 
