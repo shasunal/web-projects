@@ -9,7 +9,7 @@ const { validateWord } = require("./services/validator");
 
 //Create app
 const app = express();
-const PORT = 3000;
+const PORT = 3006;
 
 //middleware that runs before my routes
 app.use(cors());
