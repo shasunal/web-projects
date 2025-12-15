@@ -1,0 +1,89 @@
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  margin: 40px;
+  color: #111;
+ 
+}
+
+#wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.instructions {
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  line-height: 1.4;
+  padding-bottom: 4rem;
+}
+
+#grid {
+  display: grid;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.row-label,
+.col-label {
+  font-size: 0.9rem;
+  line-height: 1.2;
+  padding: 4px 6px;
+  color: #333;
+}
+
+input {
+  height: 32px;
+  padding: 4px 6px;
+  font-size: 0.95rem;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  outline: none;
+}
+input.valid {
+  background: #eef6ee;
+  border-color: green;
+}
+
+input.partial {
+  background: #f7f4e8;
+  border-color: yellow;
+}
+
+input.invalid {
+  background: #f8ecec;
+  border-color: red;
+}
+button {
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-top: 3rem;
+  
+}
+#grid {
+  max-width: 800px;
+}
+
+.label {
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.corner {
+  opacity: 0;
+}
+
+
